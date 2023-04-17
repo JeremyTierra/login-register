@@ -14,26 +14,28 @@ Este es un ejemplo de una API para registrar productos y permitir la autenticaci
 1. Clonar el repositorio
    ```bash
    git clone https://github.com/tu-usuario/api-productos.git
-Instalar las dependencias
-bash
-Copy code
-npm install
-Crear una base de datos en PostgreSQL
-Crear un archivo .env con los siguientes valores (actualizar con los valores de su base de datos)
-makefile
-Copy code
-PORT=3000
-DB_HOST=localhost
-DB_PORT=5432
-DB_NAME=nombre_de_la_base_de_datos
-DB_USER=nombre_de_usuario_de_postgresql
-DB_PASSWORD=contraseña_de_usuario_de_postgresql
-SECRET_KEY=secreto_para_generar_el_token_jwt
-Correr las migraciones
-arduino
-Copy code
-npm run migrate
-Correr el servidor
-sql
-Copy code
-npm start
+   
+2. Instalar las dependencias
+
+        npm ci
+
+3. Crear una base de datos en PostgreSQL 
+tablas
+
+table_users
+ - id_user [PK] (uuid)
+ - name (text)
+ - password (text)
+ - email (text)
+ - role (text)
+ 
+Products
+
+ - id [PK] (integer)
+ - name (text)
+ - category (text)
+ - price (text)
+ - imgURL (text)
+
+4. Correr el servidor
+npm run dev
