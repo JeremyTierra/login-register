@@ -39,3 +39,5 @@ products
 
 4. Correr el servidor
 npm run dev
+
+rutas de prueba en el archivo http.http roles posibles user y admin
