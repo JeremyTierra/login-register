@@ -29,7 +29,7 @@ table_users
  - email (text)
  - role (text)
  
-Products
+products
 
  - id [PK] (integer)
  - name (text)
