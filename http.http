@@ -34,10 +34,10 @@ POST http://localhost:5000/api/auth/signup HTTP/1.1
 Content-Type: application/json
 
 {
-    "name": "Jeresmy",
-     "email": "jeremy13@gmail.com",
+    "name": "Jeremy",
+     "email": "jeremy@gmail.com",
      "password": "25312",
-     "role": "moderator"
+     "role": "admin"
 }
 ###
 POST http://localhost:5000/api/auth/signin HTTP/1.1
