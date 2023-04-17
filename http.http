@@ -34,16 +34,17 @@ POST http://localhost:5000/api/auth/signup HTTP/1.1
 Content-Type: application/json
 
 {
-    "name": "Prewo7du8dds9ct27r2s",
-     "email": "El8ectrodomesticos",
-     "password": "hola"
+    "name": "Jeresmy",
+     "email": "jeremy13@gmail.com",
+     "password": "25312",
+     "role": "moderator"
 }
 ###
 POST http://localhost:5000/api/auth/signin HTTP/1.1
 Content-Type: application/json
 
 {
-    "name": "Prewo7du8dds9ct27r2s",
-     "email": "El8ectrodomesticos",
-     "password": "hola"
+  "name": "Jeremy",
+     "email": "jeremy@gmail.com",
+     "password": "25312"
 }

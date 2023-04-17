@@ -30,11 +30,11 @@ export function updateProductById(req, res) {
 }
 export function deleteProductById(req, res) {
 
-  try {
-    client.query(`DELETE FROM products
-    WHERE id =${req.params.id};`).then(()=>res.send("Producto "+req.params.id + " eliminado"));
+    try {
+        client.query(`DELETE FROM products
+    WHERE id =${req.params.id};`).then(() => res.send("Producto " + req.params.id + " eliminado"));
 
-} catch (err) {
-    res.send(err);
-};
+    } catch (err) {
+        res.send(err);
+    };
 }

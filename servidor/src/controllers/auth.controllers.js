@@ -6,11 +6,11 @@ var jwt = require('jsonwebtoken');
 
 export async function signup(req, res) {
     try {
-        const { name, email, password } = req.body;
+        const { name, email, password, role } = req.body;
         var salt = bcrypt.genSaltSync(10);
         var hash = bcrypt.hashSync(password, salt);
-        let id =uuidv4();
-        await client.query('INSERT INTO table_users (id_user, name, password, email) VALUES ($1, $2, $3, $4)', [id, name, hash, email]);
+        let id = uuidv4();
+        await client.query('INSERT INTO table_users (id_user, name, password, email, role) VALUES ($1, $2, $3, $4, $5)', [id, name, hash, email, role ? role : "user"]);
         var token = jwt.sign({ id: id }, config.SECRET, {
             expiresIn: 86400
         });
@@ -33,5 +33,5 @@ export async function signin(req, res) {
     var token = jwt.sign({ id: usuario.rows[0].id_user }, config.SECRET, {
         expiresIn: 86400
     });
-    res.json({"token":token});
+    res.json({ "token": token });
 }
